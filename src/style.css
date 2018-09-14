@@ -1,0 +1,14 @@
+.github-list ul{
+  list-style-type: none;
+  padding: 20px;
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-avatar {
+  height: 100px;
+}
+
+.github-list-item {
+  margin: 20px;
+}
