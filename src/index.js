@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import GithubSearch from "./components/GithubSearch";
+import GithubSearchApp from "./components/GithubSearchApp";
 import "./style.css";
 
 const root = document.getElementById("root");
@@ -8,7 +8,7 @@ const root = document.getElementById("root");
 function App() {
   return (
     <div id="app">
-      <GithubSearch />
+      <GithubSearchApp />
     </div>
   );
 }

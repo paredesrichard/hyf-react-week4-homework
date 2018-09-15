@@ -1,19 +1,18 @@
 import React from "react";
 import GithubListItem from "./GithubListItem";
 
-class GithubList extends React.Component {
-  render() {
-    const { githubs } = this.props;
+function GithubList(props) {
+    //console.log("githublist props",props);
+    const { githubData } = props;
     return (
       <div className="github-list">
         <ul>
-          {githubs.map(github => (
-            <GithubListItem githubItem={github} />
+          {githubData.map(github => (
+            <GithubListItem key={github.id} githubItem={github} />
           ))}
         </ul>
       </div>
     );
   }
-}
 
 export default GithubList;
