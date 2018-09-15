@@ -17,12 +17,12 @@ class GithubSearchApp extends React.Component {
 
   search() {
     const searchKeyword = this.state.searchKeyword;
-    //console.log("searchKeyword:", searchKeyword);
     if (searchKeyword === "") {
       this.setState({ githubData: [] });
       return;
     } else {
-      fetchGithub(searchKeyword).then(body => {
+      const url=`https://api.github.com/search/users?q=${searchKeyword}`
+      fetchGithub(url).then(body => {
         this.setState({ githubData: body.items, searchKeyword: "" });
       });
     }
